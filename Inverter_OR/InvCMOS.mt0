@@ -1,0 +1,8 @@
+$DATA1 SOURCE='HSPICE' VERSION='L-2016.06-SP1 win64' PARAM_COUNT=0
+.TITLE ''
+ charge           power            tpdr             tpdf            
+ tpd              trise            tfall            temper          
+ alter#          
+ -1.826e-013       3.288e-013       3.464e-010       3.853e-010     
+  3.658e-010       6.602e-010       6.989e-010        25.0000       
+1               

@@ -1,0 +1,6 @@
+$DATA1 SOURCE='HSPICE' VERSION='L-2016.06-SP1 win64' PARAM_COUNT=0
+.TITLE ''
+ tp1              tp2              tp3              tp4             
+ tp5              temper           alter#          
+  1.611e-010       1.463e-010       1.589e-010       1.468e-010     
+  1.581e-010        25.0000        1               

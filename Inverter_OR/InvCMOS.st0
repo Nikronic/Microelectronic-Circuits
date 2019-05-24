@@ -1,0 +1,53 @@
+****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******
+ Input File: InvCMOS.sp
+ lic:
+ lic: FLEXlm: v11.2.1
+ lic: USER:   NIkan                HOSTNAME: NIkronic
+ lic: HOSTID: "d85de2e29c47"       PID:      10124
+ lic: Using FLEXlm license file:
+ lic: 27000@NIkronic
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 30-dec-2020/2019.2019
+ lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@NIkronic
+ lic:
+ init: begin read circuit files,  cpu clock=  2.35E-01
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\behave\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\AD\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\XILINX\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\TLINE\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\TI\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\SIGNET\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\PCI\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\LIN_TECH\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\PET\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\DI0\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\COMLINE\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\BURR_BRM\
+       option search = C:\synopsys\Hspice_L-2016.06-SP1\parts\BJT\
+       option runlvl
+       option post =     2.00
+       option nomod
+ init: end read circuit files,  cpu clock=  2.42E-01 peak memory=        48 mb
+ init: begin check errors,  cpu clock=  2.42E-01
+ init: end check errors,  cpu clock=  2.46E-01 peak memory=        49 mb
+ init: begin setup matrix, pivot=     0 cpu clock=  2.46E-01
+       establish matrix -- done,  cpu clock=  2.47E-01 peak memory=        49 mb
+       re-order matrix -- done,  cpu clock=  2.47E-01 peak memory=        49 mb
+ init: end setup matrix,  cpu clock=  2.47E-01 peak memory=        49 mb
+ dcop: begin dcop,  cpu clock=  2.48E-01
+ dcop: end dcop,  cpu clock=  2.51E-01 peak memory=        49 mb  tot_iter=       3
+ output: C:\Users\NIkan\Desktop\FUOG\Microelectornic Circuits 1\HSpice\MC_Sim01_
+ sweep: tran tran0    begin, stop_t=  6.00E-08 #sweeps=6001 cpu clock=  2.52E-01
+ tran: time= 8.4501E-09 tot_iter=      43 conv_iter=      19 cpu clock= 2.54E-01
+ tran: time= 1.4450E-08 tot_iter=      47 conv_iter=      21 cpu clock= 2.54E-01
+ tran: time= 1.8917E-08 tot_iter=      94 conv_iter=      42 cpu clock= 2.55E-01
+ tran: time= 2.4159E-08 tot_iter=      98 conv_iter=      44 cpu clock= 2.55E-01
+ tran: time= 3.0000E-08 tot_iter=     102 conv_iter=      46 cpu clock= 2.57E-01
+ tran: time= 3.7841E-08 tot_iter=     146 conv_iter=      65 cpu clock= 2.60E-01
+ tran: time= 4.3841E-08 tot_iter=     150 conv_iter=      67 cpu clock= 2.60E-01
+ tran: time= 4.8810E-08 tot_iter=     193 conv_iter=      86 cpu clock= 2.61E-01
+ tran: time= 5.6831E-08 tot_iter=     199 conv_iter=      89 cpu clock= 2.61E-01
+ tran: time= 6.0000E-08 tot_iter=     201 conv_iter=      90 cpu clock= 2.61E-01
+ sweep: tran tran0    end,  cpu clock=  2.61E-01 peak memory=        49 mb
+>info:         ***** hspice job concluded
+ lic: Release hspice token(s)

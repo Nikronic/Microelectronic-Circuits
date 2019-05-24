@@ -1,0 +1,142 @@
+ ****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******                      
+  Copyright (c) 1986 - 2019 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: TwoInputOR.sp                                                     
+  Command line options: C:\synopsys\Hspice_L-2016.06-SP1\WIN64\hspice.com -i TwoInputOR.sp -o C:\Users\NIkan\Desktop\FUOG\Microelectornic Circuits 1\HSpice\MC_Sim01_MohammadDoostiLakhani\TwoInputOR.lis
+  lic:  
+  lic: FLEXlm: v11.2.1 
+  lic: USER:   NIkan                HOSTNAME: NIkronic 
+  lic: HOSTID: "d85de2e29c47"       PID:      8952 
+  lic: Using FLEXlm license file: 
+  lic: 27000@NIkronic 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2020/2019.2019 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@NIkronic 
+  lic:   
+  **info** (TwoInputOR.sp:13) DC voltage reset to initial transient source value in source 0:va. new dc=0.1800D+01
+ 
+
+ Warning: Pd = 0 is less than Weff = 1.51083e-007 in BSIM3 model 0:nmos element mna with W = 1.7e-007, L = 1.6e-007
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+ **info** dc convergence successful at Newton-Raphson method 
+1****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******                      
+ ******  
+ 
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   1.8000  0:ab      = 417.1809m 0:b       =   0.     
+ +0:nor     =  23.2159n 0:or      =   1.8000  0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                   
+ element  0:va       0:vb       0:vdd     
+  volts      1.8000     0.         1.8000 
+  current    0.         0.       -18.3572p
+  power      0.         0.        33.0430p
+
+     total voltage source power dissipation=   33.0430p       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                                                    
+ element  0:mpa      0:mpb      0:mna      0:mnb      0:mpo      0:mno     
+ model    0:pmos     0:pmos     0:nmos     0:nmos     0:pmos     0:nmos    
+ region       Cutoff     Cutoff     Linear     Cutoff     Linear     Cutoff
+  id        -7.1162p  -10.8475p   13.0646p    5.0278a   -5.2926p    1.6926p
+  ibs        0.         0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.         0.         0.         0.     
+  vgs        0.      -417.1809m    1.8000     0.        -1.8000    23.2159n
+  vds       -1.3828  -417.1808m   23.2159n   23.2159n  -60.6892n    1.8000 
+  vbs        0.         1.3828     0.         0.         0.         0.     
+  vth     -469.4179m -814.2552m  422.6826m  422.6826m -448.2846m  435.6389m
+  vdsat    -38.5649m  -37.4053m  475.4048m   40.5854m -941.4796m   37.8643m
+  vod      469.4179m  397.0743m    1.3773  -422.6826m   -1.3517  -435.6389m
+  beta     569.9419u  481.8321u  768.5476u  418.5942u  246.2346u  150.3081u
+  gam eff  501.2484m  453.1772m  509.4603m  509.4603m  379.6393m  553.8239m
+  gm       187.2659p  320.9497p    4.1671p  135.6288a  428.0163f   46.0666p
+  gds        3.8143p   20.1464p  562.7446u  216.5663p   87.2084u  716.7310f
+  gmb       64.0606p   71.3782p  394.0776f   40.1386a    0.        15.1386p
+  cdtot    584.7300a  584.7299a  200.9634a  110.5934a  206.8452a  110.5925a
+  cgtot      1.4098f    1.3119f  393.2471a  272.1823a  379.6148a  340.9791a
+  cstot    584.7316a  584.7326a  127.5658a  110.5930a  123.0173a  110.5938a
+  cbtot    247.5293a  141.2022a   55.0581a   54.2966a   48.3980a  124.2174a
+  cgs      580.1368a  592.7669a  190.7397a  108.1976a  203.6191a  107.3292a
+  cgd      582.1396a  577.9754a  190.5338a  109.6887a  184.7331a  109.4331a
+
+
+
+ ******
+ 
+
+ ****** transient analysis tnom=  25.000 temp=  25.000 ******
+ tp1= 161.1238p  targ=   8.3501n   trig=   8.1889n
+ tp2= 146.3185p  targ= 236.7725p   trig=  90.4541p
+ tp3= 158.9394p  targ=  20.2382n   trig=  20.0793n
+ tp4= 146.8272p  targ=  16.2357n   trig=  16.0889n
+ tp5= 158.0610p  targ=  40.2377n   trig=  40.0796n
+
+          ***** job concluded
+ ******  
+ 
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     4
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =       7 # elements   =      10
+  # resistors   =       0 # capacitors =       1 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       3
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =       6 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.01           1          20
+  transient          0.02        6001         838         317 rev=        51
+  readin             0.02
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         49.71 megabytes
+           total cpu time            0.05 seconds
+           total elapsed time        0.31 seconds
+           job started at     17:03:13 05/24/2019
+           job ended   at     17:03:13 05/24/2019
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.26(s)

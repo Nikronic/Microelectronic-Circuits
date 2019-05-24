@@ -1,0 +1,19 @@
+* "simulator" "HSPICE" 
+* "version" "L-2016.06-SP1 win64"
+* "format" "HSP"
+* "rundate" "17:03:13 05/24/2019 "
+* "netlist" "TwoInputOR.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   1.8000        
++ ab = 417.1809m       
++ b =   0.            
++ nor =  23.2159n       
++ or =   1.8000        
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     
