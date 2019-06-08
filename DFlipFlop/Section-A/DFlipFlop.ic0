@@ -1,0 +1,22 @@
+* "simulator" "HSPICE" 
+* "version" "L-2016.06-SP1 win64"
+* "format" "HSP"
+* "rundate" "15:41:15 06/07/2019 "
+* "netlist" "DFlipFlop.sp "
+* "runtitle" ""
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ 1 = 899.4517m       
++ 2 = 899.4517m       
++ 3 = 899.4517m       
++ clk =   1.8000        
++ d =  30.0183n       
++ nclk =   0.            
++ notd =   1.8000        
++ q = 899.4517m       
++ vdd =   1.8000        
+***   END: Saved Operating Point ***                     

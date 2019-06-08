@@ -1,0 +1,201 @@
+ ****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******                      
+  Copyright (c) 1986 - 2019 by Synopsys, Inc. All Rights Reserved.              
+  This software and the associated documentation are proprietary
+  to Synopsys, Inc. This software may only be used in accordance
+  with the terms and conditions of a written license agreement with
+  Synopsys, Inc. All other use, reproduction, or distribution of
+  this software is strictly prohibited.
+  Input File: DFlipFlop.sp                                                      
+  Command line options: C:\synopsys\Hspice_L-2016.06-SP1\WIN64\hspice.com -i DFlipFlop.sp -o C:\Users\NIkan\Desktop\FUOG\Microelectornic Circuits 1\HSpice\MC_Sim02_MohammadDoostiLakhani\DFlipFlop.lis
+  lic:  
+  lic: FLEXlm: v11.2.1 
+  lic: USER:   NIkan                HOSTNAME: NIkronic 
+  lic: HOSTID: "d85de2e29c47"       PID:      16072 
+  lic: Using FLEXlm license file: 
+  lic: 27000@NIkronic 
+  lic: Checkout 1 hspice 
+  lic: License/Maintenance for hspice will expire on 30-dec-2020/2019.2019 
+  lic: 1(in_use)/99(total) FLOATING license(s) on SERVER 27000@NIkronic 
+  lic:   
+1****** HSPICE -- L-2016.06-SP1 win64 (Aug 24 2016) ******                      
+ ******  
+ 
+
+ ****** circuit name directory
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             inv                1.00 
+        2 x2.                             inv                1.00 
+        3 x3.                             inv                1.00 
+        4 x4.                             inv                1.00 
+        5 x5.                             inv                1.00 
+  **info** (DFlipFlop.sp:13) DC voltage reset to initial transient source value in source 0:vclk. new dc=0.1800D+01
+ 
+
+  
+      
+ **info** set option symb=1 internally to help for convergence.
+ *****************************************************************
+ ******  option summary
+ ******
+ runlvl  = 3         bypass  = 2.0000    
+  Opening plot unit= 79
+ file=C:\Users\NIkan\Desktop\FUOG\Microelectornic Circuits 1\HSpice\MC_Sim02_MohammadDoostiLakhani\DFlipFlop.pa0
+
+ **info** dc convergence successful at Newton-Raphson method 
+ ******  
+ 
+
+ ****** operating point information tnom=  25.000 temp=  25.000 ******
+ ****** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:1       = 899.4517m 0:2       = 899.4517m 0:3       = 899.4517m
+ +0:clk     =   1.8000  0:d       =  30.0183n 0:nclk    =   0.     
+ +0:notd    =   1.8000  0:q       = 899.4517m 0:vdd     =   1.8000 
+
+
+ **** voltage sources
+
+ subckt                                              
+ element  0:vclk     0:vdd      0:vnclk    0:vnotd   
+  volts      1.8000     1.8000     0.         1.8000 
+  current    0.      -309.8589u    0.         0.     
+  power      0.       557.7460u    0.         0.     
+
+     total voltage source power dissipation=  557.7460u       watts
+
+
+
+
+ **** mosfets
+
+
+ subckt                                               x1         x1        
+ element  0:mp1      0:mn1      0:mp2      0:mn2      1:m1       1:m2      
+ model    0:pmos     0:nmos     0:pmos     0:nmos     0:nmos     0:pmos    
+ region       Cutoff     Cutoff     Linear     Linear     Linear     Cutoff
+  id       2.727e-26    8.0037p    2.5736p    4.9679p   30.0060p  -14.8034p
+  ibs        0.         0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.         0.         0.         0.     
+  vgs        1.8000   -30.0183n -899.4517m  900.5483m    1.8000     0.     
+  vds      899.4517m  899.4517m   18.9457n   18.9457n   30.0183n   -1.8000 
+  vbs        1.8000   -30.0183n  900.5483m -899.4517m    0.         0.     
+  vth     -697.5201m  465.8920m -729.6778m  659.5457m  473.4386m -468.9068m
+  vdsat    -39.1008m   38.7234m -157.7797m  193.9825m  559.4742m  -38.8683m
+  vod        1.5981  -465.8920m -169.7739m  241.0026m    1.3266   468.9068m
+  beta     932.1076u    1.1557m  891.1343u    1.2295m    1.1190m    1.0565m
+  gam eff  485.8365m  564.1219m  485.8365m  552.2963m  564.1219m  514.0892m
+  gm       7.884e-25  216.1123p   15.0323p   21.1017p    8.2118p  389.5557p
+  gds      3.614e-26    5.7246p  135.8384u  262.2157u  999.5908u    7.5198p
+  gmb      2.463e-25   64.1190p    3.7969p    3.6702p    3.5342p  128.5324p
+  cdtot      2.2882f  961.1135a    2.5053f    1.2131f    1.3782f    2.1314f
+  cgtot      2.5499f  924.0248a    3.5855f    1.3297f    1.3299f    2.5501f
+  cstot      2.1314f    1.0554f    2.9751f    1.0512f    1.0940f    2.6213f
+  cbtot      2.7416f    1.4563f    2.7839f    1.3045f    1.5484f    3.0900f
+  cgs        1.0430f  363.2367a    1.5757f  685.6791a  636.7753a    1.0442f
+  cgd        1.0694f  372.7080a    2.0300f  617.5254a  649.7009a    1.0532f
+
+
+
+ subckt   x2         x2         x3         x3         x4         x4        
+ element  2:m1       2:m2       3:m1       3:m2       4:m1       4:m2      
+ model    0:nmos     0:pmos     0:nmos     0:pmos     0:nmos     0:pmos    
+ region     Saturati   Saturati   Saturati   Saturati   Saturati   Saturati
+  id        77.4647u  -77.4647u   77.4647u  -77.4647u   77.4647u  -77.4647u
+  ibs        0.         0.         0.         0.         0.         0.     
+  ibd        0.         0.         0.         0.         0.         0.     
+  vgs      899.4517m -900.5483m  899.4517m -900.5483m  899.4517m -900.5483m
+  vds      899.4517m -900.5483m  899.4517m -900.5483m  899.4517m -900.5483m
+  vbs        0.         0.         0.         0.         0.         0.     
+  vth      465.8920m -478.9267m  465.8920m -478.9267m  465.8920m -478.9267m
+  vdsat    262.9314m -324.0218m  262.9313m -324.0218m  262.9314m -324.0218m
+  vod      433.5597m -421.6216m  433.5597m -421.6216m  433.5597m -421.6216m
+  beta       1.2201m  970.7511u    1.2201m  970.7511u    1.2201m  970.7511u
+  gam eff  564.1219m  514.0892m  564.1219m  514.0892m  564.1219m  514.0892m
+  gm       262.8040u  298.0738u  262.8040u  298.0738u  262.8040u  298.0738u
+  gds       15.0723u   14.4972u   15.0723u   14.4972u   15.0723u   14.4972u
+  gmb       53.2426u   91.2711u   53.2426u   91.2711u   53.2426u   91.2711u
+  cdtot    959.6479a    2.2830f  959.6479a    2.2830f  959.6479a    2.2830f
+  cgtot      1.2480f    3.4018f    1.2480f    3.4018f    1.2480f    3.4018f
+  cstot      1.2981f    3.2612f    1.2981f    3.2612f    1.2981f    3.2612f
+  cbtot      1.4208f    3.1626f    1.4208f    3.1626f    1.4208f    3.1626f
+  cgs      820.5132a    2.2740f  820.5132a    2.2740f  820.5132a    2.2740f
+  cgd      370.0974a    1.0439f  370.0974a    1.0439f  370.0974a    1.0439f
+
+
+
+ subckt   x5         x5        
+ element  5:m1       5:m2      
+ model    0:nmos     0:pmos    
+ region     Saturati   Saturati
+  id        77.4647u  -77.4647u
+  ibs        0.         0.     
+  ibd        0.         0.     
+  vgs      899.4517m -900.5483m
+  vds      899.4517m -900.5483m
+  vbs        0.         0.     
+  vth      465.8920m -478.9267m
+  vdsat    262.9313m -324.0218m
+  vod      433.5597m -421.6216m
+  beta       1.2201m  970.7511u
+  gam eff  564.1219m  514.0892m
+  gm       262.8040u  298.0738u
+  gds       15.0723u   14.4972u
+  gmb       53.2426u   91.2711u
+  cdtot    959.6479a    2.2830f
+  cgtot      1.2480f    3.4018f
+  cstot      1.2981f    3.2612f
+  cbtot      1.4208f    3.1626f
+  cgs      820.5132a    2.2740f
+  cgd      370.0974a    1.0439f
+
+
+
+
+          ***** job concluded
+ ******  
+ 
+
+ ****** job statistics summary tnom=  25.000 temp=  25.000 ******
+
+  ******  HSPICE Threads Information  ******
+
+  Command Line Threads Count :     1
+  Available CPU Count        :     4
+  Actual Threads Count       :     1
+
+
+  ******  Circuit Statistics  ******
+  # nodes       =      10 # elements   =      18
+  # resistors   =       0 # capacitors =       0 # inductors   =       0
+  # mutual_inds =       0 # vccs       =       0 # vcvs        =       0
+  # cccs        =       0 # ccvs       =       0 # volt_srcs   =       4
+  # curr_srcs   =       0 # diodes     =       0 # bjts        =       0
+  # jfets       =       0 # mosfets    =      14 # U elements  =       0
+  # T elements  =       0 # W elements =       0 # B elements  =       0
+  # S elements  =       0 # P elements =       0 # va device   =       0
+  # vector_srcs =       0 # N elements =       0
+
+
+  ******  Runtime Statistics (seconds)  ******
+
+  analysis           time    # points   tot. iter  conv.iter
+  op point           0.00           1           7
+  transient          0.01        3001         324         139 rev=         8
+  readin             0.01
+  errchk             0.00
+  setup              0.00
+  output             0.00
+
+
+           peak memory used         48.85 megabytes
+           total cpu time            0.03 seconds
+           total elapsed time        0.19 seconds
+           job started at     15:41:15 06/07/2019
+           job ended   at     15:41:15 06/07/2019
+
+
+  lic: Release hspice token(s) 
+ lic: total license checkout elapse time:        0.15(s)
